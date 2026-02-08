@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: OnePieceBot
+    env: node
+    plan: free
+    repo: https://github.com/vendroz-tech/one-piece-bot.git
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: SESSION_ID
+        sync: false
+      - key: OWNER_NUMBER
+        sync: false
